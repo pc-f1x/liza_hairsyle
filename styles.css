@@ -121,7 +121,7 @@ header {
 .hero {
     position: relative;
     text-align: center;
-    background-image: url('path/to/your/image.jpg'); /* החלף עם הנתיב לתמונה שלך */
+    background-image: url('https://raw.githubusercontent.com/pc-f1x/liza_hairsyle/refs/heads/main/pics/front.png'); /* החלף עם הנתיב לתמונה שלך */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
