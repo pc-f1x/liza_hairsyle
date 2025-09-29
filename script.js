@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // אנימציות פשוטות בגלילה
 document.addEventListener('DOMContentLoaded', function() {
     function animateOnScroll() {
-        const elements = document.querySelectorAll('.service-item');
+        const elements = document.querySelectorAll('.service-item, .gallery-item, .testimonial-item');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // הגדרת סגנונות התחלתיים
-    const elementsToAnimate = document.querySelectorAll('.service-item');
+    const elementsToAnimate = document.querySelectorAll('.service-item, .gallery-item, .testimonial-item');
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
