@@ -37,6 +37,20 @@ h1, h2, h3, h4 {
     color: var(--secondary-color);
 }
 
+/* סגנונות תמונות גלובליים */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+}
+
 /* סגנונות כותרת */
 header {
     padding: 1.5rem 0;
@@ -67,6 +81,15 @@ header {
     background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url('https://source.unsplash.com/random/1600x900/?hairstyle,salon') no-repeat center center/cover;
     color: var(--light-color);
     margin-bottom: var(--section-spacing);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 60vh;
+    max-height: 500px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h2 {
@@ -140,6 +163,7 @@ header {
     overflow: hidden;
     border-radius: 10px;
     height: 280px;
+    width: 100%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
@@ -154,6 +178,8 @@ header {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
+    /* קביעת גודל קבוע */
+    max-height: 280px;
 }
 
 .gallery-item:hover img {
@@ -212,6 +238,11 @@ header {
     overflow: hidden;
     margin-bottom: 1rem;
     border: 3px solid var(--primary-color);
+    /* קביעת גודל קבוע */
+    min-width: 80px;
+    min-height: 80px;
+    max-width: 80px;
+    max-height: 80px;
 }
 
 .testimonial-image img {
@@ -288,6 +319,11 @@ footer {
 
 /* שאילתות מדיה */
 @media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+        min-height: 250px;
+    }
+    
     .hero h2 {
         font-size: 2rem;
     }
@@ -302,6 +338,14 @@ footer {
 
     .gallery-container {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .gallery-item {
+        height: 220px;
+    }
+    
+    .gallery-item img {
+        max-height: 220px;
     }
 
     .testimonial-container {
@@ -322,6 +366,8 @@ footer {
 
     .hero {
         padding: 3rem 1rem;
+        height: 40vh;
+        min-height: 200px;
     }
 
     .hero h2 {
@@ -329,6 +375,19 @@ footer {
     }
 
     .gallery-item {
-        height: 220px;
+        height: 180px;
+    }
+    
+    .gallery-item img {
+        max-height: 180px;
+    }
+    
+    .testimonial-image {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 70px;
+        max-height: 70px;
     }
 }
