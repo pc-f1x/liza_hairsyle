@@ -14,7 +14,7 @@
     --secondary-color: #141414;
     --light-color: #ffffff;
     --accent-color: rgba(172, 125, 28, 0.1);
-    --section-spacing: 4rem;
+    --section-spacing: 1.5rem; /* הקטנת הרווח בין סקציות */
     --transition: all 0.3s ease;
 }
 
@@ -22,7 +22,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--secondary-color);
-    line-height: 1.6;
+    line-height: 1.5;
     direction: rtl;
     background-color: var(--light-color);
 }
@@ -36,7 +36,7 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* הקטנת מרווח */
     color: var(--secondary-color);
 }
 
@@ -56,7 +56,7 @@ a img {
 
 /* סגנונות כותרת */
 header {
-    padding: 0.8rem 0;
+    padding: 0.5rem 0;
     background-color: var(--light-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
@@ -66,7 +66,7 @@ header {
 
 .logo-container {
     display: flex;
-    justify-content: flex-start; /* יישור לצד ימין בגלל ה-RTL */
+    justify-content: flex-start;
     align-items: center;
     padding: 0 1rem;
     max-width: 1200px;
@@ -120,36 +120,35 @@ header {
 /* מדור גיבור */
 .hero {
     text-align: center;
-    padding: 6rem 1rem;
+    padding: 3rem 1rem; /* הקטנת padding */
     background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url('https://source.unsplash.com/random/1600x900/?hairstyle,salon') no-repeat center center/cover;
     color: var(--light-color);
     margin-bottom: var(--section-spacing);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 60vh;
-    max-height: 500px;
-    min-height: 300px;
+    height: 40vh; /* הקטנת גובה */
+    max-height: 350px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* הקטנת גודל פונט */
+    margin-bottom: 0.5rem;
     color: var(--light-color);
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 /* מדור שירותים */
 .services {
-    padding: 2rem 0;
+    padding: 1.5rem 0; /* הקטנת padding */
     margin-bottom: var(--section-spacing);
     text-align: center;
 }
@@ -158,13 +157,13 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1rem; /* הקטנת gap */
+    margin-top: 1rem;
 }
 
 .service-item {
     flex: 1 1 300px;
-    padding: 2rem;
+    padding: 1.5rem; /* הקטנת padding */
     background-color: var(--accent-color);
     border-radius: 10px;
     transition: var(--transition);
@@ -172,48 +171,49 @@ header {
 }
 
 .service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-item i {
-    font-size: 2.5rem;
+    font-size: 2rem; /* הקטנת גודל אייקון */
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .service-item h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
+    margin-bottom: 0.3rem;
 }
 
 /* מדור גלריה */
 .gallery {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     margin-bottom: var(--section-spacing);
     text-align: center;
 }
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* הקטנת גודל תא */
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    height: 280px;
+    border-radius: 8px;
+    height: 200px; /* הקטנת גובה */
     width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .gallery-item img {
@@ -221,8 +221,7 @@ header {
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
-    /* קביעת גודל קבוע */
-    max-height: 280px;
+    max-height: 200px;
 }
 
 .gallery-item:hover img {
@@ -235,32 +234,32 @@ header {
     left: 0;
     right: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    padding: 1.5rem;
+    padding: 1rem;
     color: var(--light-color);
     text-align: right;
     transition: var(--transition);
 }
 
 .overlay span {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
 /* מדור המלצות */
 .testimonials {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     margin-bottom: var(--section-spacing);
     text-align: center;
     background-color: var(--accent-color);
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .testimonial-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .testimonial-item {
@@ -269,23 +268,22 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-image {
-    width: 80px;
-    height: 80px;
+    width: 60px; /* הקטנת גודל */
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 1rem;
-    border: 3px solid var(--primary-color);
-    /* קביעת גודל קבוע */
-    min-width: 80px;
-    min-height: 80px;
-    max-width: 80px;
-    max-height: 80px;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--primary-color);
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
 }
 
 .testimonial-image img {
@@ -296,36 +294,45 @@ header {
 
 .testimonial-content p {
     font-style: italic;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .testimonial-content h4 {
     color: var(--primary-color);
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* מדור יצירת קשר */
 .contact {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     background-color: var(--accent-color);
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: var(--section-spacing);
+}
+
+.contact h3 {
+    margin-bottom: 0.3rem;
+}
+
+.contact p {
+    margin-bottom: 0.5rem;
 }
 
 .contact-buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .contact-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -333,8 +340,8 @@ header {
 }
 
 .contact-button i {
-    margin-left: 10px;
-    font-size: 1.5rem;
+    margin-left: 8px;
+    font-size: 1.3rem;
 }
 
 .phone-button {
@@ -348,31 +355,32 @@ header {
 }
 
 .contact-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* כותרת תחתונה */
 footer {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: var(--secondary-color);
     color: var(--light-color);
+    font-size: 0.9rem;
 }
 
 /* שאילתות מדיה */
 @media (max-width: 768px) {
     .hero {
-        height: 50vh;
-        min-height: 250px;
+        height: 35vh;
+        min-height: 180px;
     }
     
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .logo-link {
@@ -388,15 +396,15 @@ footer {
     }
 
     .gallery-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     
     .gallery-item {
-        height: 220px;
+        height: 180px;
     }
     
     .gallery-item img {
-        max-height: 220px;
+        max-height: 180px;
     }
 
     .testimonial-container {
@@ -404,9 +412,9 @@ footer {
     }
 
     .contact-buttons {
-        flex-direction: column;
-        width: 80%;
-        margin: 2rem auto 0;
+        flex-direction: row;
+        width: 100%;
+        margin: 1rem auto 0;
     }
 }
 
@@ -420,29 +428,34 @@ footer {
     }
 
     .hero {
-        padding: 3rem 1rem;
-        height: 40vh;
-        min-height: 200px;
+        padding: 2rem 1rem;
+        height: 30vh;
+        min-height: 150px;
     }
 
     .hero h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .gallery-item {
-        height: 180px;
+        height: 150px;
     }
     
     .gallery-item img {
-        max-height: 180px;
+        max-height: 150px;
     }
     
     .testimonial-image {
-        width: 70px;
-        height: 70px;
-        min-width: 70px;
-        min-height: 70px;
-        max-width: 70px;
-        max-height: 70px;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        width: 80%;
     }
 }
